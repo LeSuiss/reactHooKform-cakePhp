@@ -24,15 +24,15 @@ les fichiers significatifs pour la compréhension de l'appli sont:
 
 
 ### Front: React & scss
-    1. le fichier home.ctp a pour seule vocation d'appeler le script react/index.js sur une de ses balises html.
-    2. ce script est une compilation faite par webpack du dossier ReactComponents(au besoin voir /webpack.config.js). Ce dernier n'a donc pas vocation a être utilisé en production
-    3. le css additionnel (en plus de celui créer par cakePHP) est géré dans webroot/css/scss.css. Il s'agit à nouveau d'une compilation du scss existant dans le repertoire scss. scss n'a donc pas non plus vocation être appelé en production.
+1. le fichier home.ctp a pour seule vocation d'appeler le script react/index.js sur une de ses balises html.
+2. ce script est une compilation faite par webpack du dossier ReactComponents(au besoin voir /webpack.config.js). Ce dernier n'a donc pas vocation a être utilisé en production
+3. le css additionnel (en plus de celui créer par cakePHP) est géré dans webroot/css/scss.css. Il s'agit à nouveau d'une compilation du scss existant dans le repertoire scss. scss n'a donc pas non plus vocation être appelé en production.
      
 #### les scripts de l'environnement de dev:
-$bin/cake server : lance le serveur sur le port 8765
-$npm run dev : lance webpack et permet le suivi des modifications react (suppose un rafraichissement avec vidage du cache Ctrl+F5 hors mac)
-$npm run build: minifie le repertoire react.
-$npm run sasswatch: suivi des modifications scss repercutées en temps réelle sur le fichier .css.
+1. $bin/cake server : lance le serveur sur le port 8765
+2. $npm run dev : lance webpack et permet le suivi des modifications react (suppose un rafraichissement avec vidage du cache Ctrl+F5 hors mac)
+3. $npm run build: minifie le repertoire react.
+4. $npm run sasswatch: suivi des modifications scss repercutées en temps réelle sur le fichier .css.
 
 
 
