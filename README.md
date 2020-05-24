@@ -30,7 +30,7 @@ les fichiers significatifs pour la compréhension de l'appli sont:
      
 #### les scripts de l'environnement de dev:
 1. $bin/cake server : lance le serveur sur le port 8765
-2. $npm run dev : lance webpack et permet le suivi des modifications react (suppose un rafraichissement avec vidage du cache Ctrl+F5 hors mac)
+2. $npm run watch : lance webpack et permet le suivi des modifications react (suppose un rafraichissement avec vidage du cache Ctrl+F5 hors mac)
 3. $npm run build: minifie le repertoire react.
 4. $npm run sasswatch: suivi des modifications scss repercutées en temps réelle sur le fichier .css.
 

@@ -94,7 +94,9 @@ const HomePage = () => {
             {result>0 && 
             <p style={{margin:'15px'}}> 
                 <CountUp 
-                    end={result}
+                //result is in grams, displays in kg
+                    end={result/1000}
+                    decimals={3}
                     duration={0.8}
                     prefix="Your CO2 footprint for this expense is :  "
                     suffix=" kg"
