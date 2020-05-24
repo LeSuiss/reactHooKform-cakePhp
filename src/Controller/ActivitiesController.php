@@ -1,8 +1,13 @@
 <?php
 namespace App\Controller;
 
+use Cake\Controller\Component\RequestHandlerComponent;
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
+use Cake\Controller\Component;
+use Cake\Controller\Controller;
 
+use Cake\Core\Configure;
 /**
  * Activities Controller
  *
@@ -12,6 +17,13 @@ use App\Controller\AppController;
  */
 class ActivitiesController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    
+    }
+
     /**
      * Index method
      *
@@ -23,6 +35,22 @@ class ActivitiesController extends AppController
 
         $this->set(compact('activities'));
     }
+
+    public function gettingJSON()
+    {
+
+        $this->request->allowMethod(['ajax', 'post', 'put', 'get']);
+        
+        // // Définit le format de la V
+        $this->viewBuilder()->className('json');
+        // Récupérer les données
+        $elementsTable = TableRegistry::get('activities');
+        $elements = $elementsTable->find();
+
+        return $this->response->withType('application/json')
+        ->withStringBody(json_encode($elements));
+    }
+
 
     /**
      * View method

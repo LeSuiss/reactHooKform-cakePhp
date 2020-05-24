@@ -1,6 +1,87 @@
+//************************************************
+// CSS FOR DB TABLE
+//************************************************
 
-    *{
-        border: solid 3px red !important; 
-        color: green;
-        font-size:40px;
-    } 
+.activities{
+    padding:10px;
+
+    .button.ui{
+        float:right;
+        margin-top:10px;
+        
+        >*{color:white;}
+    }
+}
+//************************************************
+// CSS FOR HOMEPAGE
+//************************************************
+
+$BorderColor: rgb(197, 191, 191);
+
+%gridForm{
+    display: grid;
+    gap:6px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "b1 b2 b3"
+    "c1 c2 c3 "
+    "d1 d2 d3 ";
+ }
+
+//homepage is the global container
+#HomePage{
+    margin:5vw;
+    max-width: 800px;
+    @extend %gridForm;
+    border: solid 1px $BorderColor;
+
+        >h2{
+            grid-area: a1;
+            width: max-content;
+            line-height:40px;
+            margin-top: -25px;
+            background-color:white;
+            z-index: 10;
+            margin-left: 10%;
+            padding:0 5%;
+        }
+    
+        //the formulary with 2 titles (h3) and multiples rows
+        .questionnary{
+            grid-area: b1 / b1 / b3 / b3;
+        padding:10px;
+        @extend %gridForm;
+        
+        //titles //! A1 + A2
+        h3{text-align:center; margin:auto !important;}
+        h3:nth-of-type(1){grid-area: a1; }
+        h3:nth-of-type(2){grid-area: a2;}
+        
+
+//add new expense //! A3
+>button:not([type="submit"]){
+grid-area: a3;
+align-self: center;
+justify-self: center;
+
+}
+        //! B1 . B3
+        #formRow{
+            @extend %gridForm;
+            grid-area: b1 / b1 / b3 / b3;
+            :nth-child(1){grid-area: a1}
+            :nth-child(2){grid-area: a2}
+            :nth-child(3){grid-area: a3}
+        }};
+
+
+        [type="submit"]{
+            width:auto;
+            grid-area: c2;
+        }
+        p{
+            grid-area: d1 /d1 / d3 /d3 
+        }
+    }
+ 

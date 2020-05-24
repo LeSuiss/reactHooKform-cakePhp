@@ -37,7 +37,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	
 <link rel="stylesheet" type="text/css" href="/css/activities.css" />
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/button.min.css
+"/>
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
@@ -56,11 +57,3 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </body>
 </html>
 
-<!-- IMPORTING REACT Library  -->
-
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
-
-<script src="/webroot/js/react/runtime.js" crossorigin>
-</script>

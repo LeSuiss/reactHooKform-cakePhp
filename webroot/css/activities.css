@@ -1,4 +1,54 @@
-* {
-  border: solid 3px red !important;
-  color: green;
-  font-size: 40px; }
+.activities {
+  padding: 10px; }
+  .activities .button.ui {
+    float: right;
+    margin-top: 10px; }
+    .activities .button.ui > * {
+      color: white; }
+
+#HomePage, #HomePage .questionnary, #HomePage .questionnary #formRow {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "a1 a2 a3" "b1 b2 b3" "c1 c2 c3 " "d1 d2 d3 "; }
+
+#HomePage {
+  margin: 5vw;
+  max-width: 800px;
+  border: solid 1px #c5bfbf; }
+  #HomePage > h2 {
+    grid-area: a1;
+    width: max-content;
+    line-height: 40px;
+    margin-top: -25px;
+    background-color: white;
+    z-index: 10;
+    margin-left: 10%;
+    padding: 0 5%; }
+  #HomePage .questionnary {
+    grid-area: b1 / b1 / b3 / b3;
+    padding: 10px; }
+    #HomePage .questionnary h3 {
+      text-align: center;
+      margin: auto !important; }
+    #HomePage .questionnary h3:nth-of-type(1) {
+      grid-area: a1; }
+    #HomePage .questionnary h3:nth-of-type(2) {
+      grid-area: a2; }
+    #HomePage .questionnary > button:not([type="submit"]) {
+      grid-area: a3;
+      align-self: center;
+      justify-self: center; }
+    #HomePage .questionnary #formRow {
+      grid-area: b1 / b1 / b3 / b3; }
+      #HomePage .questionnary #formRow :nth-child(1) {
+        grid-area: a1; }
+      #HomePage .questionnary #formRow :nth-child(2) {
+        grid-area: a2; }
+      #HomePage .questionnary #formRow :nth-child(3) {
+        grid-area: a3; }
+  #HomePage [type="submit"] {
+    width: auto;
+    grid-area: c2; }
+  #HomePage p {
+    grid-area: d1 /d1 / d3 /d3; }
